@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Jekyll v3.8.5" />
+    <title>Template di un blog - Bootstrap</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.3/examples/blog/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.2/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
+    />
+  </head>
+
+  <!-- I selettori CSS ti aiutano a selezionare elementi HTML tramite CSS e JavaScript.
+
+Con questi esercizi farai pratica nell'utilizzarli sia per modificare lo stile di elementi HTML sia nel selezionarli per manipolarli via JavaScript
+I selettori CSS sono estremamente utili per selezionare nodi del DOM con precisione grazie al fatto che funzionano perfettamente con querySelector,
+senza necessità di scrivere algoritmi più complessi per arrivare allo stesso risultato.
+
+
+IMPORTANTE: NON PUOI inserire classi o id aggiuntivi nell'HTML, devi usare solo quello che già c'è. Non puoi cambiare la struttura in nessuna maniera. L'obiettivo è quello di usare Selettori e Combinatori per arrivare a selezionare l'elemento di interesse per poi manipolarlo nello stile o nella struttura con JS.
+
+Per testare i Selettori CSS puoi cambiare all'elemento che stai cercando di selezionare il colore, colore di sfondo, aggiungere un bordo colorato ecc. Se il selettore è corretto vedrai applicare quello stile all'elemento, se non succede significa che il selettore non è corretto o qualche altra regola CSS sta prevalendo. Controlla sempre dall'inspector del browser.
+
+ESERCIZIO 1) Crea un selettore per selezionare l'<h1> nella sezione "hero", ovvero nel jumbotron
+ESERCIZIO 2) Crea un selettore per selezionare tutti i figli dell'elemento navbar
+ESERCIZIO 3) Crea un selettore per selezionare il link "Continua a leggere" del jumbotron
+ESERCIZIO 4) Crea un selettore per selezionare il primo blog post
+ESERCIZIO 5) Crea un selettore per selezionare l'<hr> del primo blog post e colorarlo di rosso
+ESERCIZIO 6) Crea un selettore per selezionare i link pari della navbar
+ESERCIZIO 7) Crea un selettore per selezionare tutti gli <li> della prima "ordered-list" della sidebar ("Archivio")
+ESERCIZIO 8) Crea un selettore per selezionare l'autore del secondo blog post
+ESERCIZIO 9) Crea un selettore per selezionare il secondo <li> della lista del terzo blog post
+ESERCIZIO 10) Crea un selettore per selezionare il link "Torna su" che trovi a fondo pagina nell'angolo in basso a destra
+ESERCIZIO 11) Crea un selettore per selezionare il bottone "Nuovi" che trovi in basso
+ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
+
+...scorri in fondo fino allo <script> per trovare gli esercizi di JavaScript
+
+ -->
+  <body>
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 text-center">
+            <a class="text-muted" href="#">Resta aggiornato</a>
+          </div>
+          <div class="col-4 text-center">
+            <a href="#" class="blog-header-logo text-dark">Grande</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a href="#" class="text-muted">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="mx-3"
+                role="img"
+                viewBox="0 0 24 24"
+                focusable="false"
+              >
+                <title>Cerca</title>
+                <circle cx="10.5" cy="10.5" r="7.5"></circle>
+                <path d="M21 211-5.3-5.2"></path>
+              </svg>
+            </a>
+            <a href="#" class="btn btn-sm btn-outline-secondary">Iscriviti</a>
+          </div>
+        </div>
+      </header>
+      <nav class="nav d-flex justify-content-between mb-2">
+        <span>Esteri</span>
+        <span>Arte</span>
+        <span>Tecnologia</span>
+        <span>Design</span>
+        <span>Cultura</span>
+        <span>Business</span>
+        <span>Politica</span>
+        <span>Opinioni</span>
+        <span>Scienza</span>
+        <span>Salute</span>
+        <span>Stile</span>
+        <span>Viaggi</span>
+      </nav>
+      <div class="jumbotron p-4 p-md-5 rounded">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 font-italic">
+            Titolo lungo del post di apertura
+          </h1>
+          <p class="lead my-3">
+            Blocco di testo che forma le prime righe dell'attacco del post.
+            L'attacco e' l'aggancio del post, la parte piu' importante e che ti
+            permette di catturare l'attenzione del elttore. Devi riassumere le
+            informazioni decisive per far capire subito l'argomento.
+          </p>
+          <p class="lead mb-0">
+            <a href="#" class="font-weight-bold">Continua a leggere...</a>
+          </p>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Esteri</strong>
+              <h3 class="mb-0">Post in primo piano</h3>
+              <div class="mb-1 text-muted">Nov 21</div>
+              <p class="card-text mb-auto">
+                Questo e' un elemento piu' grande che supporta il testo
+                sottostante come naturale introduzione all'informazione
+                successiva.
+              </p>
+              <a href="#" class="stretched-link"
+                >Continua a leggere... ::after</a
+              >
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <svg
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: Thumbnail"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Miniature</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Esteri</strong>
+              <h3 class="mb-0">Post in primo piano</h3>
+              <div class="mb-1 text-muted">Nov 21</div>
+              <p class="card-text mb-auto">
+                Questo e' un elemento piu' grande che supporta il testo
+                sottostante come naturale introduzione all'informazione
+                successiva.
+              </p>
+              <a href="#" class="stretched-link">
+                "Continua a leggere" ::after
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <svg
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+                aria-label="Placeholder: Thumbnail"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Miniatura</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
